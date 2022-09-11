@@ -1,0 +1,8 @@
+bin/hadoop com.sun.tools.javac.Main Anagrams.java
+jar -cf af.jar Anagrams*.class
+bin/hadoop jar af.jar Anagrams input output
+cat output/part-r-00000
+
+rm -r output
+rm af.jar
+rm Anagrams.java
